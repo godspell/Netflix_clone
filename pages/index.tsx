@@ -37,6 +37,7 @@ const Home = ({
   trendingNow,
   products,
 }: Props) => {
+  console.log(netflixOriginals);
   const { user, loading } = useAuth()
   const subscription = useSubscription(user)
   const showModal = useRecoilValue(modalState)
@@ -57,7 +58,7 @@ const Home = ({
         <title>
           {movie?.title || movie?.original_name || 'Home'} - Netflix
         </title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/netflix.png" />
       </Head>
 
       <Header />
